@@ -51,10 +51,10 @@ int main(){
         break;
 
         case 2:
-            printf("Opção U - Diagonal Superior Direita (upright) \n");
-            printf("Opção D - Diagonal Inferior Esquerda (downleft) \n");
-            printf("Opção L - Diagonal Superior Esquerda (upleft) \n");
-            printf("Opção R - Diagonal Inferior Direita (downright) \n");
+            printf("Opção U - Diagonal Superior Direita (up--right) \n");
+            printf("Opção D - Diagonal Inferior Esquerda (down--left) \n");
+            printf("Opção L - Diagonal Superior Esquerda (up--left) \n");
+            printf("Opção R - Diagonal Inferior Direita (down--right) \n");
             printf("Em qual direção você deseja mover a peça: ");
             scanf(" %c", &direction);
             printf("\n");
@@ -75,10 +75,10 @@ int main(){
             printf("Opção D - Baixo (down) \n");
             printf("Opção L - Esquerda (left) \n");
             printf("Opção R - Direita (right) \n");
-            printf("Opção 1 - Diagonal Superior Direita (upright) \n");
-            printf("Opção 2 - Diagonal Inferior Esquerda (downleft) \n");
-            printf("Opção 3 - Diagonal Superior Esquerda (upleft) \n");
-            printf("Opção 4 - Diagonal Inferior Direita (downright) \n");
+            printf("Opção 1 - Diagonal Superior Direita (up-right) \n");
+            printf("Opção 2 - Diagonal Inferior Esquerda (down-left) \n");
+            printf("Opção 3 - Diagonal Superior Esquerda (up-left) \n");
+            printf("Opção 4 - Diagonal Inferior Direita (down-right) \n");
             printf("Em qual direção você deseja mover a peça: ");
             scanf(" %c", &direction);
             printf("\n");
@@ -105,7 +105,7 @@ int main(){
     printf("Casas\n");
     printf("------------------------\n");
     printf("\n");
-    printf("(min = 1 / máx = 8)\n");
+    printf("(min = 1 | máx = 8)\n");
     printf("quantas casas você deseja se mover: ");
     scanf("%d", &squares);
 
@@ -217,7 +217,7 @@ int main(){
                     break;
 
                     case 'D':
-                    case 'd': 
+                    case 'd':
                         printf("Baixo ");
                     break;
 
