@@ -51,19 +51,19 @@ int main(){
         break;
 
         case 2:
-            printf("Opção U - Diagonal Superior Direita (up--right) \n");
-            printf("Opção D - Diagonal Inferior Esquerda (down--left) \n");
-            printf("Opção L - Diagonal Superior Esquerda (up--left) \n");
-            printf("Opção R - Diagonal Inferior Direita (down--right) \n");
+            printf("Opção Q - Diagonal Superior Esquerda (up-left) \n");
+            printf("Opção E - Diagonal Superior Direita (up-right) \n");
+            printf("Opção Z - Diagonal Inferior Esquerda (down-left) \n");
+            printf("Opção C - Diagonal Inferior Direita (down-right) \n");
             printf("Em qual direção você deseja mover a peça: ");
             scanf(" %c", &direction);
             printf("\n");
 
             if(
-                direction != 'U' && direction != 'u' &&
-                direction != 'D' && direction != 'd' &&
-                direction != 'L' && direction != 'l' &&
-                direction != 'R' && direction != 'r'
+                direction != 'Q' && direction != 'q' &&
+                direction != 'E' && direction != 'e' &&
+                direction != 'Z' && direction != 'z' &&
+                direction != 'C' && direction != 'c'
             ){
                 printf("Direção inválida!");
                 return 0;
@@ -75,10 +75,10 @@ int main(){
             printf("Opção D - Baixo (down) \n");
             printf("Opção L - Esquerda (left) \n");
             printf("Opção R - Direita (right) \n");
-            printf("Opção 1 - Diagonal Superior Direita (up-right) \n");
-            printf("Opção 2 - Diagonal Inferior Esquerda (down-left) \n");
-            printf("Opção 3 - Diagonal Superior Esquerda (up-left) \n");
-            printf("Opção 4 - Diagonal Inferior Direita (down-right) \n");
+            printf("Opção Q - Diagonal Superior Esquerda (up-left) \n");
+            printf("Opção E - Diagonal Superior Direita (up-right) \n");
+            printf("Opção Z - Diagonal Inferior Esquerda (down-left) \n");
+            printf("Opção C - Diagonal Inferior Direita (down-right) \n");
             printf("Em qual direção você deseja mover a peça: ");
             scanf(" %c", &direction);
             printf("\n");
@@ -88,8 +88,10 @@ int main(){
                 direction != 'D' && direction != 'd' &&
                 direction != 'L' && direction != 'l' &&
                 direction != 'R' && direction != 'r' &&
-                direction != '1' && direction != '2' &&
-                direction != '3' && direction != '4'
+                direction != 'Q' && direction != 'q' &&
+                direction != 'E' && direction != 'e' &&
+                direction != 'Z' && direction != 'z' &&
+                direction != 'C' && direction != 'c'
             ){
                 printf("Direção inválida!");
                 return 0;
@@ -170,26 +172,25 @@ int main(){
             do{
                 switch(direction)
                 {
-                    case 'U':
-                    case 'u': 
-                        printf("Cima Direita ");
-                    break;
-
-                    case 'D':
-                    case 'd': 
-                        printf("Baixo Esquerda ");
-                    break;
-
-                    case 'L':
-                    case 'l': 
+                    case 'Q':
+                    case 'q': 
                         printf("Cima Esquerda ");
                     break;
 
-                    case 'R':
-                    case 'r': 
+                    case 'E':
+                    case 'e': 
+                        printf("Cima Direita ");
+                    break;
+
+                    case 'Z':
+                    case 'z': 
+                        printf("Baixo Esquerda ");
+                    break;
+
+                    case 'C':
+                    case 'c': 
                         printf("Baixo Direita ");
                     break;
-                    
                     
                     default:
                         printf("Direção não reconhecida!");
@@ -231,19 +232,23 @@ int main(){
                         printf("Direita ");
                     break;
                     
-                    case '1':
-                        printf("Cima Direita ");
-                    break;
-
-                    case '2': 
-                        printf("Baixo Esquerda ");
-                    break;
-
-                    case '3': 
+                    case 'Q':
+                    case 'q': 
                         printf("Cima Esquerda ");
                     break;
 
-                    case '4': 
+                    case 'E':
+                    case 'e': 
+                        printf("Cima Direita ");
+                    break;
+
+                    case 'Z':
+                    case 'z': 
+                        printf("Baixo Esquerda ");
+                    break;
+
+                    case 'C':
+                    case 'c': 
                         printf("Baixo Direita ");
                     break;
                     
