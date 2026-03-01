@@ -100,19 +100,27 @@ int main(){
         break;
     
         case 4:
-            printf("Opção Q - Diagonal Superior Esquerda (up-left) \n");
-            printf("Opção E - Diagonal Superior Direita (up-right) \n");
-            printf("Opção Z - Diagonal Inferior Esquerda (down-left) \n");
-            printf("Opção C - Diagonal Inferior Direita (down-right) \n");
+            printf("Opção A - Esquerda / Cima\n");
+            printf("Opção B - Esquerda / Baixo\n");
+            printf("Opção C - Direita/ Cima\n");
+            printf("Opção D - Direita / Baixo\n");
+            printf("Opção E - Cima / Esquerda\n");
+            printf("Opção F - Cima / Direita\n");
+            printf("Opção G - Baixo / Esquerda\n");
+            printf("Opção H - Baixo / Direita\n");
             printf("Em qual direção você deseja mover a peça: ");
             scanf(" %c", &direction);
             printf("\n");
 
             if(
-                direction != 'Q' && direction != 'q' &&
+                direction != 'A' && direction != 'a' &&
+                direction != 'B' && direction != 'b' &&
+                direction != 'C' && direction != 'c' &&
+                direction != 'D' && direction != 'd' &&
                 direction != 'E' && direction != 'e' &&
-                direction != 'Z' && direction != 'z' &&
-                direction != 'C' && direction != 'c'
+                direction != 'F' && direction != 'f' &&
+                direction != 'G' && direction != 'g' &&
+                direction != 'H' && direction != 'h'
             ){
                 printf("Direção inválida!");
                 return 0;
@@ -287,8 +295,52 @@ int main(){
 
             switch (direction)
             {
-                case 'Q':
-                case 'q': 
+                case 'A':
+                case 'a': 
+                    for(int y = 1; y < 2; y++){
+                        for (int x = 1; x < 3; x++){
+                            printf("Esquerda ");
+                        }
+
+                        printf("Cima\n");
+                    };
+                break;
+
+                case 'B':
+                case 'b': 
+                    for(int y = 1; y < 2; y++){
+                        for (int x = 1; x < 3; x++){
+                            printf("Esquerda ");
+                        }
+
+                        printf("Baixo\n");
+                    };
+                break;
+
+                case 'C':
+                case 'c': 
+                    for(int y = 1; y < 2; y++){
+                        for (int x = 1; x < 3; x++){
+                            printf("Direita ");
+                        }
+
+                        printf("Cima\n");
+                    };
+                break;
+
+                case 'D':
+                case 'd': 
+                    for(int y = 1; y < 2; y++){
+                        for (int x = 1; x < 3; x++){
+                            printf("Direita ");
+                        }
+
+                        printf("Baixo\n");
+                    };
+                break;
+
+                case 'E':
+                case 'e': 
                     for(int y = 1; y < 2; y++){
                         for (int x = 1; x < 3; x++){
                             printf("Cima ");
@@ -298,8 +350,8 @@ int main(){
                     }
                 break;
 
-                case 'E':
-                case 'e': 
+                case 'F':
+                case 'f': 
                     int moveY = 0;
 
                     do{
@@ -314,8 +366,8 @@ int main(){
                     }while (moveY < 1);
                 break;
 
-                case 'Z':
-                case 'z': 
+                case 'G':
+                case 'g': 
                     int move = 0;
                     while(move < 3){
                         while(move < 2){
@@ -328,8 +380,8 @@ int main(){
                     }
                 break;
 
-                case 'C':
-                case 'c': 
+                case 'H':
+                case 'h': 
                     for(int y = 1; y < 2; y++){
                         for (int x = 1; x < 3; x++){
                             printf("Baixo ");
@@ -351,8 +403,16 @@ int main(){
             int moves = 0;
             while(moves < 3){
                 while(moves < 2){
-                    if( direction == 'q' || direction == 'Q' || 
-                        direction == 'e' || direction == 'E'){
+                    if( direction == 'A' || direction == 'a' || 
+                        direction == 'B' || direction == 'b'){
+                            printf("Esquerda ");
+                        }else if(
+                        direction == 'C' || direction == 'c' || 
+                        direction == 'D' || direction == 'd'){
+                            printf("Direita ");
+                        }else if(
+                        direction == 'E' || direction == 'e' || 
+                        direction == 'F' || direction == 'f'){
                             printf("Cima ");
                         }else{
                             printf("Baixo ");
@@ -360,8 +420,16 @@ int main(){
                     moves++;
                 }
 
-                if( direction == 'q' || direction == 'Q' || 
-                    direction == 'z' || direction == 'Z'){
+                if( direction == 'A' || direction == 'a' || 
+                    direction == 'C' || direction == 'c'){
+                        printf("Cima\n");
+                    }else if(
+                    direction == 'B' || direction == 'b' || 
+                    direction == 'D' || direction == 'd'){
+                        printf("Baixo\n");
+                    }else if(
+                    direction == 'E' || direction == 'e' ||
+                    direction == 'G' || direction == 'g'){
                         printf("Esquerda\n");
                     }else{
                         printf("Direita\n");
